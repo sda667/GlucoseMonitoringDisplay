@@ -195,14 +195,7 @@ This code simulates glucose readings and displays them in a readable format. The
 After integrating all components, the final device successfully displayed glucose readings and color-coded trends. While Bluetooth data acquisition was not fully operational by the end of the project, the wired prototype proved that the concept was technically feasible.
 
 #### Final Assembly and Display
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-<model-viewer 
-    src="displayBox.stl"
-    alt="3D model of the display box"
-    camera-controls 
-    auto-rotate 
-    style="width: 600px; height: 400px;">
-</model-viewer>
+You can view the full [`3D model`](displayBox.stl)
 ![prototype](images/prototype.jpg)
 ![prototype](images/prototype.gif)
 
