@@ -191,6 +191,7 @@ After integrating all components, the final device successfully displayed glucos
 
 #### Final Assembly and Display
 ![prototype](images/prototype.jpg)
+![prototype](images/prototype.gif)
 
 #### Display Graph Example
 ![graph](images/graphPrototype.jpg)
