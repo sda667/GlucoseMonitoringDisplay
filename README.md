@@ -124,7 +124,9 @@ The final enclosure version was compact, with accessible openings for power and 
 
 ### 6.1 Data Analysis and Visualization with MicroPython
 
-Before integrating the electronics, we developed a MicroPython script to analyze and visualize glucose data from CSV files produced by a CGM. This program reads timestamped glucose readings, filters the last 24 hours of data, and produces both textual summaries and plots.
+Before integrating the electronics, we developed a MicroPython script to analyze and visualize glucose data from CSV files produced by a CGM. This program reads timestamped glucose readings, filters the last 24 hours of data, and produces both textual summaries and plots.  
+
+
 
 ```python
 import pandas as pd
@@ -149,7 +151,9 @@ plt.savefig('graph.png')
 plt.show()
 ```
 
-This allowed validation of the data pipeline before embedding it into the microcontroller logic.
+This allowed validation of the data pipeline before embedding it into the microcontroller logic.  
+_find the full code in [`dataPlotting.py`](dataPlotting.py)_
+
 
 ---
 
@@ -157,7 +161,7 @@ This allowed validation of the data pipeline before embedding it into the microc
 
 Once data visualization was validated, the focus shifted to programming the display output. Using the **UTFTGLUE library**, we implemented a dynamic visualization that plots glucose trends and indicates current values through colors (green for safe, yellow for moderate, red for high).
 
-#### Simplified C++ Snippet
+#### Simplified C++ Snippet (_find the full code in [`displayGraphs.cpp`](displayGraphs.cpp)_)
 
 ```cpp
 #include <UTFTGLUE.h>
@@ -179,6 +183,7 @@ void loop() {
 }
 ```
 
+
 This code simulates glucose readings and displays them in a readable format. The color scheme and layout were optimized for clarity and visibility.
 
 ---
@@ -190,6 +195,14 @@ This code simulates glucose readings and displays them in a readable format. The
 After integrating all components, the final device successfully displayed glucose readings and color-coded trends. While Bluetooth data acquisition was not fully operational by the end of the project, the wired prototype proved that the concept was technically feasible.
 
 #### Final Assembly and Display
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<model-viewer 
+    src="displayBox.stl"
+    alt="3D model of the display box"
+    camera-controls 
+    auto-rotate 
+    style="width: 600px; height: 400px;">
+</model-viewer>
 ![prototype](images/prototype.jpg)
 ![prototype](images/prototype.gif)
 
